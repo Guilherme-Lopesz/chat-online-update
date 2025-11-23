@@ -2,7 +2,7 @@
 # app/main.py
 from fastapi import FastAPI, WebSocket, WebSocketDisconnect
 from fastapi.middleware.cors import CORSMiddleware
-from sqlalchemy import Session
+from sqlalchemy.orm import Session
 import json, os, base64, secrets
 from .db import init_db, SessionLocal, Invite, Friend, User, Message
 from .cryptog2 import generate_key, derive_key_from_password, encrypt_message, decrypt_message
